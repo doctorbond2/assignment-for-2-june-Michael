@@ -1,10 +1,6 @@
-<script>
-import PracticeComponentVue from '../components/PracticeComponent.vue'
-</script>
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <h2>asd</h2>
   </div>
 </template>
 
