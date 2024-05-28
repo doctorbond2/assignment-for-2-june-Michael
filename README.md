@@ -1,39 +1,48 @@
-# assignment-for-2-june-Michael
+KODUPPGIFT
 
-This template should help get you started developing with Vue 3 in Vite.
+På vår hemsida vill vi visa en lista över våra anställda (dummydata). Data kan hittas på följande slutpunkt: https://reqres.in/api/users
 
-## Recommended IDE Setup
+Bonuspoäng om du lägger till paginering enligt hur api:n fungerar.
+För att få sida2: https://reqres.in/api/users?page=2
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Dessa är några måsten enligt designteamet:
 
-## Type Support for `.vue` Imports in TS
+Runda profilbilder
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+Namnet, följt av en kontaktlänk som leder till de anställdas e-postadress
 
-## Customize configuration
+Responsiv design
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Utöver det kan du designa sidan hur du vill
 
-## Project Setup
+👉 Vi vill att du använder Vue som ramverk.
 
-```sh
-npm install
-```
+PRESENTATIONSVIDEO
 
-### Compile and Hot-Reload for Development
+Spela in en kort video med din telefon (30sek - 1min lång) och berätta varför du:
 
-```sh
-npm run dev
-```
+Tycker Front-end är spännande
 
-### Type-Check, Compile and Minify for Production
+Vill göra din praktik hos Vendre
 
-```sh
-npm run build
-```
+NÄR DU ÄR KLAR MED BÅDA UPPGIFTERNA
 
-### Lint with [ESLint](https://eslint.org/)
+Ladda upp ditt projekt på Github
 
-```sh
-npm run lint
-```
+Skicka länken till anna.l@vendre.se
+
+Vi vill även ha länk till deployat projekt i mejlet så att vi kan se det live (github pages eller netlify tex).
+
+Bifoga även din presentationsvideo i mejlet
+
+👊DEADLINE ÄR 2 JUNI 👊
+
+Går du vidare kommer jag höra av mig till dig mellan den 10 juni - 14 juni och boka in en personlig intervju.
+
+Har du frågor svarar på det här meddelandet.
+
+Lycka till 🌟
+
+--
+Anna, Pontus, Sara, Marcus, KH och Anna
+Vendre
