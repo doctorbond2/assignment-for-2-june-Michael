@@ -15,6 +15,20 @@ class APIHandler {
       throw { error: err, response: err.response };
     }
   }
+  async getByParams(params) {
+    let searchParams = '?' + new URLSearchParams(params).toString();
+    console.log(searchParams);
+    if (searchParams.length != '?') {
+      try {
+        console.warn(searchParams);
+        const response = await reqres_instance.get(searchParams);
+        console.warn(response);
+        return response;
+      } catch (err) {
+        throw { error: err, response: err.response };
+      }
+    }
+  }
 }
 
 const API_Handler = new APIHandler();
