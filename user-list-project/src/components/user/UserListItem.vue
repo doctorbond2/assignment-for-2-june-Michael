@@ -1,4 +1,5 @@
 <script setup>
+import UserImage from './UserImage.vue';
 const props = defineProps({
   user: {
     type: Object,
@@ -11,7 +12,7 @@ const { first_name, last_name, avatar, email, id } = user;
 <template>
   <div class="user_card_wrap">
     <p>{{ id }}</p>
-    <img :src="avatar" alt="user_avatar" />
+    <UserImage :image="avatar" />
     <h1>{{ first_name }} {{ last_name }}</h1>
   </div>
 </template>

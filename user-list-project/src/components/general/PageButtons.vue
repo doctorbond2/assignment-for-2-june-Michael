@@ -28,9 +28,9 @@ const props = defineProps({
 </template>
 <style scoped>
 .active-button {
-  @apply bg-blue-300 border border-black hover:bg-gray-200 mr-5 ml-5 w-20;
+  @apply bg-blue-300 border border-black hover:bg-gray-200 mr-5 ml-5 w-10 text-black font-bold py-1 px-1 rounded;
 }
 .non-active-button {
-  @apply bg-green-300 border border-black hover:bg-gray-200 mr-5 ml-5 w-20;
+  @apply bg-green-300 border border-black hover:bg-gray-200 mr-5 ml-5 w-10 text-black font-bold py-1 px-1 rounded;
 }
 </style>

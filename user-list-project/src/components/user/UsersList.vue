@@ -46,9 +46,11 @@ const pageButtonProps = computed(() => ({
     <h3>Current page: {{ userListData.page }}</h3>
     <h4>Total pages: {{ userListData.total_pages }}</h4>
     Data received.
-    <div v-for="user in userListData.data" :key="user + user.id">
-      <UserListItem :user="user" />
-    </div>
+    <ul>
+      <li v-for="user in userListData.data" :key="user + user.id">
+        <UserListItem :user="user" />
+      </li>
+    </ul>
   </div>
   <div v-else>No data received yet</div>
 </template>
