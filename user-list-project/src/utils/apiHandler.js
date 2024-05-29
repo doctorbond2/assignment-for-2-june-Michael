@@ -7,7 +7,7 @@ const reqres_instance = axios.create({
 class APIHandler {
   constructor() {}
 
-  async fetchData() {
+  async testFetch() {
     try {
       const response = await reqres_instance.get();
       return response;

@@ -5,7 +5,7 @@ import API_Handler from '@/utils/apiHandler.js';
 const userListData = ref(null);
 const fetchData = async () => {
   try {
-    const response = await API_Handler.fetchData();
+    const response = await API_Handler.testFetch();
     userListData.value = response.data;
     console.log(userListData.value.data);
   } catch (err) {
@@ -22,7 +22,7 @@ onMounted(() => {
 
     <div v-if="userListData">
       Data received.
-      <div v-for="user in userListData.data">
+      <div v-for="user in userListData.data" :key="user.id">
         <h3>{{ user.first_name }}</h3>
       </div>
     </div>
