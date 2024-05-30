@@ -21,7 +21,7 @@ const imageClickHandler = () => {
 <style scoped>
 .card-profile-picture {
   border-radius: 50%;
-  width: 8vw;
+  width: 80%;
   min-height: 11vh;
 }
 .image-wrapper {

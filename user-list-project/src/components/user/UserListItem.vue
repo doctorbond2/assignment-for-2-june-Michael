@@ -1,5 +1,6 @@
 <script setup>
 import UserImage from './UserImage.vue';
+import UserInfo from './UserInfo.vue';
 const props = defineProps({
   user: {
     type: Object,
@@ -15,6 +16,7 @@ const { first_name, last_name, avatar, email, id } = user;
       <UserImage :image="avatar" />
     </section>
     <h2>{{ first_name }} {{ last_name }}</h2>
+    <UserInfo :first-name="first_name" :last-name="last_name" />
     <section class="right-section" name="right-section"></section>
   </div>
 </template>
