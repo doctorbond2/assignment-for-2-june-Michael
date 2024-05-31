@@ -8,9 +8,33 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  email: {
+    type: String,
+    required: true,
+  },
+  id: {
+    type: String,
+    required: true,
+  },
 });
-
-console.log(props.firstName);
+const { firstName, lastName } = props;
+const fullName = `${firstName} ${lastName}`;
+console.log(fullName);
 </script>
-<template></template>
-<style></style>
+<template>
+  <div class="mt-8">
+    <h2>{{ fullName }}</h2>
+    <a>Make contact</a>
+  </div>
+</template>
+<style scoped>
+h2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+a {
+  cursor: pointer;
+}
+a:hover {
+  color: burlywood;
+}
+</style>

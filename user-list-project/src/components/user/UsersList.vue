@@ -41,17 +41,26 @@ const pageButtonProps = computed(() => ({
 }));
 </script>
 <template>
-  <div v-if="userListData">
-    <PageButtons v-bind="pageButtonProps" />
-    <h3>Current page: {{ userListData.page }}</h3>
-    <h4>Total pages: {{ userListData.total_pages }}</h4>
-    Data received.
-    <ul>
-      <li v-for="user in userListData.data" :key="user + user.id">
-        <UserListItem :user="user" />
-      </li>
-    </ul>
+  <div>
+    <div v-if="userListData">
+      <PageButtons v-bind="pageButtonProps" />
+      <h3>Current page: {{ userListData.page }}</h3>
+      <h4>Total pages: {{ userListData.total_pages }}</h4>
+      Data received.
+      <ul class="user-list-style">
+        <li v-for="user in userListData.data" :key="user.id" class="user-item">
+          <UserListItem :user="user" />
+        </li>
+      </ul>
+    </div>
+    <div v-else>No data received yet</div>
   </div>
-  <div v-else>No data received yet</div>
 </template>
-<style scoped></style>
+<style scoped>
+.user-list-style {
+  @apply flex flex-wrap justify-center;
+}
+.user-item {
+  @apply w-full md:w-1/2 lg:w-1/3 p-2;
+}
+</style>
