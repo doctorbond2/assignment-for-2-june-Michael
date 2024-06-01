@@ -20,12 +20,12 @@ const imageClickHandler = () => {
 </template>
 <style scoped>
 .card-profile-picture {
-  border-radius: 50%;
-  width: 9rem;
-  min-height: 100%;
+  @apply h-full object-cover rounded-full;
 }
 .image-wrapper {
-  min-width: 100%;
+  border: 3px solid black;
+  border-color: red;
   height: 9rem;
+  border-radius: 50%;
 }
 </style>
