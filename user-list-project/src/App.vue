@@ -50,6 +50,6 @@ div {
   @apply w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between;
 }
 a {
-  @apply hover:text-green-400;
+  @apply hover:text-green-300 transition transform duration-300 ease-in-out;
 }
 </style>
