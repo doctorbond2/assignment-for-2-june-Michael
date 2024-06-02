@@ -29,7 +29,7 @@ const fullName = `${first_name} ${last_name}`;
       <br />
       <h4 class="mail-text">
         Reach me on my mail
-        <a href="mailto:asd@asd.com">here</a>
+        <a :href="`mailto:${email}`">here</a>
       </h4>
 
       <div class="modal-action">

@@ -1,18 +1,6 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router';
-</script>
-
 <template>
-  <header>
-    <nav>
-      <RouterLink to="/"><h1>For Vendre</h1></RouterLink>
-    </nav>
-  </header>
-  <main>
-    <RouterView />
-  </main>
   <footer class="bg-transparent">
-    <ul class="flex justify-around content-center">
+    <ul class="flex justify-around content-center bg-transparent">
       <li>
         <h3>
           <a
@@ -35,8 +23,8 @@ import { RouterLink, RouterView } from 'vue-router';
     </ul>
   </footer>
 </template>
-
-<style scoped>
+<script setup></script>
+<style>
 nav {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
@@ -44,12 +32,9 @@ nav {
   font-size: 3em;
 }
 footer {
-  @apply rounded-lg shadow mb-4 h-[100px];
+  @apply bg-white rounded-lg shadow mb-4 dark:bg-gray-800 h-[100px];
 }
 div {
   @apply w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between;
-}
-a {
-  @apply hover:text-green-400;
 }
 </style>

@@ -14,7 +14,7 @@ const props = defineProps({
     <img
       :src="image"
       alt="user-profile-picture"
-      class="card-profile-picture border border-slate-600 m-2"
+      class="card-profile-picture m-2"
     />
   </div>
 </template>
@@ -24,11 +24,11 @@ const props = defineProps({
   display: flex;
   align-items: center;
   justify-content: center;
-  @apply border border-black rounded-full overflow-hidden h-28 w-28;
+  @apply rounded-full overflow-hidden lg:h-28 lg:w-28 sm:w-20 sm:h-20;
   padding: 0;
   margin: 0;
 }
 .card-profile-picture {
-  @apply h-full w-full object-cover rounded-full;
+  @apply h-full w-full object-cover rounded-full cursor-pointer;
 }
 </style>

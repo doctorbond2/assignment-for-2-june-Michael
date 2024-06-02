@@ -15,7 +15,6 @@ const props = defineProps({
 });
 </script>
 <template>
-  <h3 class="border border-black">{{ page }}</h3>
   <br />
   <button
     v-for="p in totalPages"

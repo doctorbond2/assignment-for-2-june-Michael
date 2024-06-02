@@ -6,7 +6,6 @@ import UserListItem from './UserListItem.vue';
 import localStorage_Handler from '@/utils/localStorageHandler.js';
 import PageButtons from '../general/PageButtons.vue';
 import { computed } from 'vue';
-import { addDelay } from '../../utils/mutators.js';
 
 const currentPage = ref(0);
 const userListData = ref(null);
@@ -46,9 +45,6 @@ const pageButtonProps = computed(() => ({
   <div>
     <div v-if="userListData" class="user-list-wrapper">
       <PageButtons v-bind="pageButtonProps" />
-      <h3>Current page: {{ userListData.page }}</h3>
-      <h4>Total pages: {{ userListData.total_pages }}</h4>
-      Data received.
       <ul class="user-list-style">
         <li v-for="user in userListData.data" :key="user.id" class="user-item">
           <UserListItem :user="user" />
