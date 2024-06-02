@@ -8,9 +8,6 @@ const props = defineProps({
     type: Function,
   },
 });
-
-// const image_modal_ID =
-//   'image_modal_' + props.image.slice(props.image.length, 4);
 </script>
 <template>
   <div type="button" @click="toggleModal" class="image-wrapper">
@@ -27,7 +24,7 @@ const props = defineProps({
   display: flex;
   align-items: center;
   justify-content: center;
-  @apply border border-black rounded-full overflow-hidden  h-28 w-28;
+  @apply border border-black rounded-full overflow-hidden h-28 w-28;
   padding: 0;
   margin: 0;
 }

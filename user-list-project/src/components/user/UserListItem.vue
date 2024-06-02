@@ -30,12 +30,13 @@ const toggleImageModal = () => (showImageModal.value = !showImageModal.value);
       <UserImage :image="avatar" :toggle-modal="toggleImageModal" />
     </section>
     <section class="right-section" name="right-section">
-      <UserInfo v-bind="userInfoProps" />
+      <UserInfo v-bind="userInfoProps" :toggle-info-modal="toggleInfoModal" />
     </section>
   </div>
-  <button class="btn" @click="toggleInfoModal">Toggle modal</button>
+
   <ImageModal
     :toggle-modal="toggleImageModal"
+    x
     :show-modal="showImageModal"
     :image="avatar"
   />

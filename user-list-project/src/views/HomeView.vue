@@ -9,6 +9,6 @@ import UsersList from '@/components/user/UsersList.vue';
 </template>
 <style scoped>
 .center-wrapper {
-  @apply flex mb-4 max-w-[80%] m-auto rounded overflow-hidden shadow-md bg-cyan-800;
+  @apply flex mb-4 max-w-[80%] m-auto rounded overflow-hidden shadow-md bg-cyan-800 min-h-[100vh];
 }
 </style>

@@ -13,32 +13,31 @@ const modalProps = defineProps({
 const { image } = modalProps;
 </script>
 <template>
-  <div class="modal" :class="{ 'modal-open': showModal }">
-    <div class="modal-box">
-      <div type="button" @click="toggleModal" class="image-wrapper">
-        <img
-          :src="image"
-          alt="user-profile-picture"
-          class="card-profile-picture border border-slate-600 m-2"
-        />
-      </div>
-
-      <div class="modal-action">
-        <button class="btn" @click="toggleModal">Close modal</button>
-      </div>
+  <div class="modal" @click="toggleModal" :class="{ 'modal-open': showModal }">
+    <div type="button" @click="toggleModal" class="image-wrapper">
+      <img
+        :src="image"
+        alt="user-profile-picture"
+        class="card-profile-picture border border-slate-600 m-2"
+      />
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 .image-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  @apply border border-black rounded-full overflow-hidden  h-28 w-28;
+  @apply border border-black rounded-full overflow-hidden  h-64 w-64;
   padding: 0;
   margin: 0;
 }
 .card-profile-picture {
   @apply h-full w-full object-cover rounded-full;
+}
+.modal,
+.modal-box {
+  background-color: transparent;
+  @apply bg-slate-200 justify-center p-10;
 }
 </style>

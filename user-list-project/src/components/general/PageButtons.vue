@@ -23,14 +23,14 @@ const props = defineProps({
     :class="{ 'active-button': page === p, 'non-active-button': page !== p }"
     @click="pageHandler(p, totalPages)"
   >
-    {{ p }}
+    Page {{ p }}
   </button>
 </template>
 <style scoped>
 .active-button {
-  @apply bg-blue-300 border border-black hover:bg-gray-200 mr-5 ml-5 w-10 text-black font-bold py-1 px-1 rounded;
+  @apply bg-blue-300 border border-black mr-5 ml-5 w-20 text-black font-bold py-1 px-1 rounded cursor-default;
 }
 .non-active-button {
-  @apply bg-green-300 border border-black hover:bg-gray-200 mr-5 ml-5 w-10 text-black font-bold py-1 px-1 rounded;
+  @apply bg-slate-200 border border-black hover:border-blue-400 mr-5 ml-5 w-20 text-black font-bold py-1 px-1 rounded;
 }
 </style>
