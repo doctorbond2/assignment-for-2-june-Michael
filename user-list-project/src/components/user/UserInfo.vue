@@ -13,7 +13,7 @@ const props = defineProps({
     required: true,
   },
   id: {
-    type: String,
+    type: Number,
     required: true,
   },
 });
@@ -30,6 +30,7 @@ console.log(fullName);
 <style scoped>
 h2 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
 }
 a {
   cursor: pointer;

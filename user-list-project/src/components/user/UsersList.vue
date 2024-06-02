@@ -6,9 +6,11 @@ import UserListItem from './UserListItem.vue';
 import localStorage_Handler from '@/utils/localStorageHandler.js';
 import PageButtons from '../general/PageButtons.vue';
 import { computed } from 'vue';
+import { addDelay } from '../../utils/mutators.js';
 
 const currentPage = ref(0);
 const userListData = ref(null);
+const delayedUserList = ref([]);
 const fetchData = async () => {
   try {
     const response = await API_Handler.getFromBaseUrl();

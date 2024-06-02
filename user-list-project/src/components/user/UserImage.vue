@@ -4,13 +4,16 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  toggleModal: {
+    type: Function,
+  },
 });
-const imageClickHandler = () => {
-  console.log('asd');
-};
+
+// const image_modal_ID =
+//   'image_modal_' + props.image.slice(props.image.length, 4);
 </script>
 <template>
-  <div type="button" @click="imageClickHandler" class="image-wrapper">
+  <div type="button" @click="toggleModal" class="image-wrapper">
     <img
       :src="image"
       alt="user-profile-picture"
@@ -18,16 +21,17 @@ const imageClickHandler = () => {
     />
   </div>
 </template>
+
 <style scoped>
 .image-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  @apply border border-black rounded-full overflow-hidden h-32 w-32;
+  @apply border border-black rounded-full overflow-hidden  h-28 w-28;
   padding: 0;
   margin: 0;
 }
 .card-profile-picture {
-  @apply h-full w-full object-cover;
+  @apply h-full w-full object-cover rounded-full;
 }
 </style>

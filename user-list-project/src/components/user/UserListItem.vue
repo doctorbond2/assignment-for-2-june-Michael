@@ -1,14 +1,16 @@
 <script setup>
 import UserImage from './UserImage.vue';
 import UserInfo from './UserInfo.vue';
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
+import ImageModal from '../general/ImageModal.vue';
+import InfoModal from '../general/InfoModal.vue';
+
 const props = defineProps({
   user: {
     type: Object,
     required: true,
   },
 });
-
 const { user } = props;
 const { first_name, last_name, avatar, email, id } = user;
 const userInfoProps = computed(() => ({
@@ -17,16 +19,31 @@ const userInfoProps = computed(() => ({
   email,
   id,
 }));
+const showInfoModal = ref(false);
+const showImageModal = ref(false);
+const toggleInfoModal = () => (showInfoModal.value = !showInfoModal.value);
+const toggleImageModal = () => (showImageModal.value = !showImageModal.value);
 </script>
 <template>
   <div class="user_card_wrap grid grid-cols-2 min-h-[80%]">
     <section class="left-section" name="left-section">
-      <UserImage :image="avatar" />
+      <UserImage :image="avatar" :toggle-modal="toggleImageModal" />
     </section>
     <section class="right-section" name="right-section">
       <UserInfo v-bind="userInfoProps" />
     </section>
   </div>
+  <button class="btn" @click="toggleInfoModal">Toggle modal</button>
+  <ImageModal
+    :toggle-modal="toggleImageModal"
+    :show-modal="showImageModal"
+    :image="avatar"
+  />
+  <InfoModal
+    :toggle-modal="toggleInfoModal"
+    :show-modal="showInfoModal"
+    :modal-content="user"
+  />
 </template>
 <style scoped>
 .user_card_wrap {
