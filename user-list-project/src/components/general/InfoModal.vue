@@ -1,4 +1,9 @@
 <script setup>
+import {
+  getInfoFromFirstChar as getJobExp,
+  getThisYear as year,
+} from '@/utils/regexHelpers';
+
 const modalProps = defineProps({
   modalContent: {
     type: Object,
@@ -11,8 +16,10 @@ const modalProps = defineProps({
   },
 });
 const { modalContent } = modalProps;
+
 const { first_name, last_name, email, avatar } = modalContent;
 const fullName = `${first_name} ${last_name}`;
+const { time, job } = getJobExp(first_name.charAt(0));
 </script>
 <template>
   <div class="modal" :class="{ 'modal-open': showModal }">
@@ -25,7 +32,8 @@ const fullName = `${first_name} ${last_name}`;
           class="card-profile-picture border border-slate-600 m-2"
         />
       </div>
-      <h3 class="mt-4 text-black">Frontend developer</h3>
+      <h3 class="mt-4 text-black">{{ job }}</h3>
+      <h4 class="text-gray-400">Partner since {{ year() - time }}</h4>
       <br />
       <h4 class="mail-text">
         Reach me on my mail

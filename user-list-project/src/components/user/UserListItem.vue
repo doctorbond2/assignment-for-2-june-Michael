@@ -56,5 +56,8 @@ const toggleImageModal = () => (showImageModal.value = !showImageModal.value);
   align-items: center;
 }
 .right-section {
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 </style>

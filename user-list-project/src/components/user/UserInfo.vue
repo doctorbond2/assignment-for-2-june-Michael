@@ -1,4 +1,5 @@
 <script setup>
+import { getInfoFromFirstChar as getJobExp } from '@/utils/regexHelpers';
 const props = defineProps({
   firstName: {
     type: String,
@@ -16,12 +17,16 @@ const props = defineProps({
     type: Function,
   },
 });
+
 const { firstName, lastName } = props;
 const fullName = `${firstName} ${lastName}`;
+const { time, job } = getJobExp(firstName.charAt(0));
+console.log(time);
 </script>
 <template>
-  <div class="mt-8">
+  <div class="mt-6">
     <h2>{{ fullName }}</h2>
+    <h3>{{ job }}</h3>
     <a class="contact-link" @click="toggleInfoModal">Make contact</a>
   </div>
 </template>
@@ -30,6 +35,11 @@ h2 {
   font-weight: bold;
   font-size: 1.2em;
   color: black;
+}
+h3 {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: gray;
 }
 a {
   cursor: pointer;
