@@ -35,6 +35,7 @@ const userInfoProps = computed(() => ({
 .left-section {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .right-section {
 }

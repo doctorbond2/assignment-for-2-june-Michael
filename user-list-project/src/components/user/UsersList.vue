@@ -42,7 +42,7 @@ const pageButtonProps = computed(() => ({
 </script>
 <template>
   <div>
-    <div v-if="userListData">
+    <div v-if="userListData" class="user-list-wrapper">
       <PageButtons v-bind="pageButtonProps" />
       <h3>Current page: {{ userListData.page }}</h3>
       <h4>Total pages: {{ userListData.total_pages }}</h4>
@@ -61,6 +61,10 @@ const pageButtonProps = computed(() => ({
   @apply flex flex-wrap justify-center;
 }
 .user-item {
-  @apply w-full md:w-1/2 lg:w-1/3 p-2;
+  @apply w-full md:w-1/2 lg:w-1/3 p-2 h-[250px] sm:h-[200px];
+}
+.user-list-wrapper {
+  overflow: auto;
+  max-height: 100vh;
 }
 </style>

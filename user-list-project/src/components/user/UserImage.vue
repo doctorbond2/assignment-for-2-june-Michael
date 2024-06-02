@@ -19,13 +19,15 @@ const imageClickHandler = () => {
   </div>
 </template>
 <style scoped>
-.card-profile-picture {
-  @apply h-full object-cover rounded-full;
-}
 .image-wrapper {
-  border: 3px solid black;
-  border-color: red;
-  height: 9rem;
-  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @apply border border-black rounded-full overflow-hidden h-32 w-32;
+  padding: 0;
+  margin: 0;
+}
+.card-profile-picture {
+  @apply h-full w-full object-cover;
 }
 </style>
