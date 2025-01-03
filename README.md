@@ -1,4 +1,4 @@
-My first try at working with Vue 3.
+Vue
 
 ```
 cd user-list-project
